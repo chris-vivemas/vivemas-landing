@@ -1,34 +1,75 @@
-HTML
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivemas</title>
- 
+ 
 <style>
- 
+ 
 html, body {
 margin: 0;
 padding: 0;
+width: 100%;
 height: 100%;
 overflow: hidden;
-background: #ffffff;
 }
- 
+ 
+body {
+position: relative;
+font-family: Segoe UI, Arial, sans-serif;
+}
+ 
 img {
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
- 
+ 
+/* Textblock */
+ 
+.overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: white;
+text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+ 
+.overlay h1 {
+margin: 0;
+font-size: 4rem;
+font-weight: 600;
+letter-spacing: 2px;
+}
+ 
+.overlay p {
+margin: 12px 0;
+font-size: 1.3rem;
+font-weight: 300;
+}
+ 
+.overlay .soon {
+margin-top: 25px;
+font-size: 1rem;
+letter-spacing: 3px;
+opacity: 0.9;
+}
+ 
 </style>
- 
 </head>
- 
+ 
 <body>
- 
+ 
 <img src="vivemas.png" alt="Vivemas">
- 
+ 
+<div class="overlay">
+<h1>Vivemas</h1>
+<p>Lebensfreude trifft digitale Zukunft.</p>
+<div class="soon">COMING SOON</div>
+</div>
+ 
 </body>
 </html>
