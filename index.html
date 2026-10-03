@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivemas</title>
+<title>Vivemás</title>
  
 <style>
  
@@ -17,57 +17,72 @@ overflow: hidden;
  
 body {
 position: relative;
-font-family: Segoe UI, Arial, sans-serif;
+font-family: "Segoe UI", Arial, sans-serif;
+background: #000;
 }
  
-img {
+.slideshow {
+position: fixed;
+inset: 0;
+}
+ 
+.slide {
+position: absolute;
+inset: 0;
+opacity: 0;
+animation: fade 18s infinite;
+}
+ 
+.slide:nth-child(1) {
+animation-delay: 0s;
+}
+ 
+.slide:nth-child(2) {
+animation-delay: 6s;
+}
+ 
+.slide:nth-child(3) {
+animation-delay: 12s;
+}
+ 
+.slide img {
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
  
-/* Textblock */
- 
-.overlay {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-color: white;
-text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
- 
-.overlay h1 {
-margin: 0;
-font-size: 4rem;
-font-weight: 600;
-letter-spacing: 2px;
-}
- 
-.overlay p {
-margin: 12px 0;
-font-size: 1.3rem;
-font-weight: 300;
-}
- 
-.overlay .soon {
-margin-top: 25px;
-font-size: 1rem;
-letter-spacing: 3px;
-opacity: 0.9;
+@keyframes fade {
+0% { opacity: 0; }
+5% { opacity: 1; }
+28% { opacity: 1; }
+33% { opacity: 0; }
+100% { opacity: 0; }
 }
  
 </style>
+ 
 </head>
  
 <body>
  
-<img src="vivemas.png" alt="Vivemas">
+<div class="slideshow">
  
-<div class="overlay">
-<h1>Vivemas</h1>
-<p>Lebensfreude trifft digitale Zukunft.</p>
+<div class="slide">
+sparß.png
+</div>
+ 
+<div class="slide">
+<img src="level.png" alt="Neues Ziel freigeschaltet">
+</div>
+ 
+<div class="slide">
+<img src="stimme.png" alt="Dein Geld hat eine Stimme">
+</div>
+ 
+</div>
+ 
+</body>
+</html>
 </div>
  
 </body>
